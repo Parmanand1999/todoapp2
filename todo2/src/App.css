@@ -121,6 +121,26 @@ button{
     display: inline-block;
     margin-right: 10px;
   }
+  .btn11{
+    box-shadow: 0px 0px 6px #888888;
+    border-radius: 8px;
+    padding: 5px;
+  }
+  .btn22{
+    box-shadow: 0px 0px 6px #888888;
+    border-radius: 8px;
+    padding: 5px;
+  }
+  .btn33{
+    box-shadow: 0px 0px 6px #888888;
+    border-radius: 8px;
+    padding: 5px;
+  }
+  .btn44{
+    box-shadow: 0px 0px 6px #888888;
+    border-radius: 8px;
+    padding: 5px;
+  }
    @media screen and (max-width: 1000px ) {
     .tags{
         display: flex;
