@@ -1,0 +1,79 @@
+body{
+  font-size: 15px;
+}
+
+.page2{
+    
+    height: auto;
+    width: auto;
+   
+}
+.work{
+    height: 25px;
+  width: 25px;
+  background-color: #9cadb9;
+  border-radius: 50%;
+  display: inline-block;
+}
+.study{
+    height: 25px;
+  width: 25px;
+  background-color: #7abfd4;
+  border-radius: 50%;
+  display: inline-block;
+}
+.entertainment{
+    height: 25px;
+  width: 25px;
+  background-color: #f08282;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dotbutton{
+  width: 140px;
+}
+.family{
+    height: 25px;
+  width: 25px;
+  background-color: rgb(81, 231, 131);
+  border-radius: 50%;
+  display: inline-block;
+}
+.divbox1{
+    background-color: #ebeb7f;
+    height: 27%;
+    width: 35%;
+    border-radius: 5px;
+    box-sizing: border-box;
+  padding: 10px;
+}
+.box1dot{
+    margin-top: -18px;
+}
+.dotp{
+  width: 30%;
+}
+.dotp2{
+  width: 20%;
+}
+.divbox2{
+  background-color: #ebeb7f;
+  width: 50%;
+  height: 50%;
+  margin-left: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  height: 214px;
+}
+.divbox3{
+  background-color: #ebeb7f;
+  width: 35%;
+  box-sizing: border-box;
+  padding: 10px;
+  
+}
+/* .divboxmain{
+  height: 500px;
+  position: relative;
+  height: 300px;
+} */
