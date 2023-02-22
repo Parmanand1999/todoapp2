@@ -1,29 +1,26 @@
 import React, { useState } from 'react';
 
-function Todopage1({onClick1, changetitle, changedesc }) {
+function Todopage1({ onClick1, addTodo }) {
     const [value1, setValue1] = useState("");
     const [value2, setValue2] = useState("");
     const [hover1, setHover1] = useState(false)
     const [hover2, setHover2] = useState(false)
     const [hover3, setHover3] = useState(false)
     const [hover4, setHover4] = useState(false)
-    // const [popup1, setPopup1] = useState(true)
-    
-    function handler(e) {
-        e.preventDefault();
-        // console.log(value2)
 
-    }
     function addbtn() {
-        changetitle(value1)
-        changedesc(value2)
-    }
 
+        addTodo({
+            title: value1,
+            description: value2,
+            tags: ""
+        })
+    }
     return (
         <>
 
             <div className='bgcolor'>
-                <form className='container' onSubmit={handler}>
+                <form className='container' onSubmit={(e)=>(e.preventDefault())}>
                     <div className='line1'>
                         <button className='btncancel' onClick={onClick1}>Cancel</button>
                         <button className='btnedit' onClick={addbtn}   >Add</button>
