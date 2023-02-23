@@ -7,6 +7,7 @@ function Todopage2() {
     const [checkbox, setCheckbox] = useState(true)
     const [popup, setPopup] = useState(false)
     const [allTodos, setAllTodos] = useState([]);
+    const [addelete, setAddelete] = useState(false)
 
     function handleDone() {
         setDone(pre => !pre) // not pre (true)
@@ -14,22 +15,28 @@ function Todopage2() {
     function handalpopup() {
         setPopup(pre => !pre)
     }
-    
     const todoHandler = (obj) => {
         function setTodo(p) {
             p.push(obj);
             return p;
         }
         setAllTodos(setTodo)
-        // setAllTodos(obj)
-
         setPopup(false)
+        // console.log(obj.completed)
     }
-    // console.log(allTodos)
+    function taskDone(id) {
+        console.log(id);
+
+
+        setCheckbox(pre => !pre)
+    }
+    function adddelethandler() {
+        setAddelete(pre => !pre)
+    }
     return (
         <>
             {/* { JSON.stringify(allTodos)} */}
-            {popup ? (<Todopage1 onClick1={handalpopup}  addTodo={todoHandler} />) : !(<Todopage1 />)}
+            {popup ? (<Todopage1 onClick1={handalpopup} addTodo={todoHandler} />) : !(<Todopage1 />)}
 
             <div className='todoapp2'>
                 <div className='header d-flex justify-content-between '>
@@ -61,7 +68,12 @@ function Todopage2() {
                                     <div className='divbox1'>
                                         <div className='divbox1line1 d-flex justify-content-between mt-3 mx-2'>
                                             {checkbox ? (<h4 >{item.title}</h4>) : (<h4><del>{item.title}</del></h4>)}
-                                            <h4 className='box1dot '>...</h4>
+                                            <div>
+                                                <div><h4 className='box1dot' onClick={adddelethandler} >...</h4></div>
+                                                {addelete ? (<div className='d-flex flex-column'>
+                                                    <button className='b'>Edit</button>
+                                                    <button className='b'>Delete</button></div>) : null}
+                                            </div>
                                         </div>
                                         {checkbox ? (<p>{item.description}</p>) : (<p><del>{item.description}</del></p>)}
                                         <div className='divbox1padding d-flex justify-content-between'>
@@ -71,7 +83,7 @@ function Todopage2() {
                                                 <span className="work "></span>
                                             </div>
                                             <div className='mx-3'>
-                                                <input type="checkbox" onClick={() => setCheckbox(pre => !pre)} id="flexCheckDisabled" />
+                                                <input type="checkbox" onClick={() => taskDone(i)} id="flexCheckDisabled" />
                                                 <label>Done</label>
                                             </div>
                                         </div>
@@ -80,7 +92,6 @@ function Todopage2() {
                             </div>
                         ))}
                     </div>
-
                 </div>
             </div>
         </>

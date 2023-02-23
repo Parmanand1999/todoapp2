@@ -13,6 +13,7 @@ function Todopage1({ onClick1, addTodo }) {
         addTodo({
             title: value1,
             description: value2,
+            completed:true,
             tags: ""
         })
     }
