@@ -13,7 +13,7 @@ function Todopage1({ onClick1, addTodo }) {
         addTodo({
             title: value1,
             description: value2,
-            completed:true,
+            completed:false,
             tags: ""
         })
     }
@@ -36,14 +36,13 @@ function Todopage1({ onClick1, addTodo }) {
                         <h5>Description</h5>
                         <div className='ptext2'>
                             <textarea id="text2" rows="1" placeholder="add a title" onChange={(e) => setValue2(e.target.value)} ></textarea>
-
                         </div>
 
                     </div>
                     <div className='tags'>
                         <h5>Tags</h5>
                         <div className='buttons'>
-                            <div className={hover1 ? 'btn11' : "btn1"} onClick={() => setHover1((s) => !s)} ><span className="dot"> </span>  <button>work</button></div>
+                            <div className={hover1 ? 'btn11' : "btn1"} onClick={() => setHover1((s) => !s)} ><span className="dot"> </span><button>work</button></div>
 
                             <div className={hover2 ? 'btn22' : "btn2"} onClick={() => setHover2((s) => !s)} ><span className="dot1"> </span><button>study</button></div>
 
